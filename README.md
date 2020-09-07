@@ -24,7 +24,7 @@ Calling the highestRated method prints out the highest rated food truck entered 
 *Variables and objects
 FoodTruck contains the descriptive variables of name, foodtype, rating, and nextTruckID. NextTruckID is the unique ID given to every Food Truck at creation. FoodTruck [] ftruck captures the array of FoodTrucks entered by the user. FoodTruckApp is the object associated with the main program class.
 
-* Instructions
+*Instructions
 The user is prompted to enter food truck info. Following this the user is prompted to request info for different outputs shared in menu.
 
 *Lessons learned
