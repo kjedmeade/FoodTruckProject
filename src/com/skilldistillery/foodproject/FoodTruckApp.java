@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class FoodTruckApp {
 
-	
-	public int numTrucks=1;
-
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -18,7 +15,6 @@ public class FoodTruckApp {
 	}
 
 	public FoodTruck[] getUserInfo(Scanner sc) {
-		int numTrucks = 1;
 		FoodTruck[] allFoodTrucks = new FoodTruck[5];
 		
 
@@ -35,15 +31,18 @@ public class FoodTruckApp {
 			String input2 = sc.next();
 			System.out.println("Rating (1-10):");
 			int input3 = sc.nextInt();
-			FoodTruck ft = new FoodTruck(input1, input2, input3, numTrucks);
+			FoodTruck ft = new FoodTruck(input1, input2, input3);
 			allFoodTrucks[i] = ft;
-			numTrucks++;
+			
 		}
 		return allFoodTrucks;
 
 	}
 	
-	public int printMenu(Scanner sc, FoodTruck[] x) {
+	public void printMenu(Scanner sc, FoodTruck[] x) {
+		boolean keepGoing =true;
+		do {
+		
 		System.out.println("Choose a menu option using 1-5");
 		System.out.println("1. List all existing food trucks.");
 		System.out.println("2. See the average rating of food trucks.");
@@ -51,8 +50,6 @@ public class FoodTruckApp {
 		System.out.println("4. Quit the program.");
 
 		int option = sc.nextInt();
-boolean keepGoing =true;
-	while (keepGoing) {
 		switch (option) {
 
 		case 1:
@@ -66,13 +63,17 @@ boolean keepGoing =true;
 			highestRated(x);
 			break;
 		case 4:
+			System.out.println("Thanks for dropping by");
+			keepGoing=false;
 			break;
 
 		default:
 			System.out.println("Please enter a valid entry");
 
 		}
-		return option;
+		
+		}while (keepGoing);
+		
 	}
 	
 	public void displayFoodTrucks(FoodTruck[] x) {
