@@ -4,15 +4,15 @@ public class FoodTruck {
 	private String name;
 	private String foodType;
 	private int rating;
-	private int nextTruckID = 1;
+	private static int nextTruckID = 0;
 	private int counter;
 
-	public FoodTruck(String n, String f, int r, int nextTruckID) {
+	public FoodTruck(String n, String f, int r) {
 		name = n;
 		foodType = f;
 		rating = r;
-		nextTruckID = counter;
-		counter++;
+		counter=nextTruckID;
+		nextTruckID++;
 
 	}
 	public FoodTruck() {
@@ -32,8 +32,8 @@ public class FoodTruck {
 
 	@Override
 	public String toString() {
-		return "FoodTruck [name=" + name + ", foodType=" + foodType + ", rating=" + rating + ", ID="
-				+ nextTruckID + "]";
+		return "FoodTruck Name=" + name + ", FoodType=" + foodType + ", Rating=" + rating + ", ID="
+				+ counter;
 	}
 
 }
