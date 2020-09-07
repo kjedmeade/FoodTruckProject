@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class FoodTruckApp {
 
+	
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -27,9 +28,9 @@ public class FoodTruckApp {
 			if (input1.equals("quit")) {
 				break;
 			}
-			System.out.println("Foodtype;");
+			System.out.println("Foodtype");
 			String input2 = sc.next();
-			System.out.println("Rating (1-10):");
+			System.out.println("Rating (1-10)");
 			int input3 = sc.nextInt();
 			FoodTruck ft = new FoodTruck(input1, input2, input3);
 			allFoodTrucks[i] = ft;
