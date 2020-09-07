@@ -1,45 +1,39 @@
 package com.skilldistillery.foodproject;
 
 public class FoodTruck {
-	public String name;
-	public String foodType;
-	public int rating;
-	public int totalNumTrucks = 1;
-	public static int nextTruckID = 1;
+	private String name;
+	private String foodType;
+	private int rating;
+	private int nextTruckID = 1;
+	private int counter;
 
 	public FoodTruck(String n, String f, int r, int nextTruckID) {
 		name = n;
 		foodType = f;
 		rating = r;
-		nextTruckID = 1;
-		nextTruckID++;
+		nextTruckID = counter;
+		counter++;
 
+	}
+	public FoodTruck() {
+		nextTruckID = counter;
+		counter++;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public String getFoodType() {
-		return foodType;
-	}
-
 	public int getRating() {
 		return rating;
 	}
 
-	public static int getNextTruckID() {
-		return nextTruckID;
-	}
 	
-	public void displayFoodTrucks(FoodTruck [] x) {
-		String x = this.toString();
-		System.out.println(x);
-	}
+
 	@Override
 	public String toString() {
-		return "FoodTruck [name=" + name + ", foodType=" + foodType + ", rating=" + rating + ", totalNumTrucks="
-				+ totalNumTrucks + "]";
+		return "FoodTruck [name=" + name + ", foodType=" + foodType + ", rating=" + rating + ", ID="
+				+ nextTruckID + "]";
 	}
 
 }
