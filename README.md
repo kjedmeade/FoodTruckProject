@@ -28,4 +28,4 @@ FoodTruck contains the descriptive variables of name, foodtype, rating, and next
 The user is prompted to enter food truck info. Following this the user is prompted to request info for different outputs shared in menu.
 
 *Lessons learned
-I learned that a scanner can be called in a method (e.g. method(sc)). I also learned a bit more about how a toString works within and between classes. 
+I learned that a scanner can be called in a method (e.g. method(sc)). I also learned a bit more about how a toString works within and between classes.
